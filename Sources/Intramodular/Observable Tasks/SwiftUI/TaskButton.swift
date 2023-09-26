@@ -22,7 +22,7 @@ public struct TaskButton<Success, Error: Swift.Error, Label: View>: View {
         
     @State private var lastTask: AnyTask<Success, Error>?
     
-    @PersistentObject private var currentTask: AnyTask<Success, Error>?
+    @State private var currentTask: AnyTask<Success, Error>?
     
     @State private var taskRenewalSubscription: AnyCancellable?
     @State private var wantsToDisplayLastTaskStatus: Bool = false
